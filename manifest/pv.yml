@@ -11,3 +11,17 @@ spec:
   storageClassName: manual
   hostPath:
     path: "/home/server/volume"
+
+---
+
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: example-pvc
+spec:
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: manual
+  resources:
+    requests:
+      storage: 10Gi
