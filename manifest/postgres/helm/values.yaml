@@ -1,0 +1,10 @@
+postgresqlPassword: mysecretpassword
+postgresqlDatabase: mydatabase
+primary:
+  persistence:
+    enabled: true
+    existingClaim: postgres-pvc
+  podSecurityContext:
+    fsGroup: 1001
+  containerSecurityContext:
+    runAsUser: 1001

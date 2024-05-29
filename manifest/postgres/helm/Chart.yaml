@@ -1,0 +1,9 @@
+apiVersion: v2
+name: my-postgres-chart
+description: A Helm chart for deploying PostgreSQL with PVC and NodePort
+type: application
+version: 1.0.0
+appVersion: "14.1.0"
+maintainers:
+  - name: Your Name
+    email: your.email@example.com
