@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: 'https://github.com/marco4test/argocd.git'
     targetRevision: HEAD
-    path: manifest/postgres/helm
+    path: manifest/postgres/helm/templates
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: default
