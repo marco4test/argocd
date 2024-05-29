@@ -1,4 +1,4 @@
-apiVersion: apps/v1
+piVersion: apps/v1
 kind: Deployment
 metadata:
   name: postgres
@@ -13,17 +13,14 @@ spec:
     spec:
       containers:
         - name: postgres
-          image: bitnami/postgresql:latest
+          image: bitnami/postgresql:14.1.0
           ports:
             - containerPort: 5432
           env:
             - name: POSTGRESQL_PASSWORD
-              valueFrom:
-                secretKeyRef:
-                  name: postgres-secret
-                  key: password
+              value: {{ .Values.postgresqlPassword }}
             - name: POSTGRESQL_DATABASE
-              value: mydatabase
+              value: {{ .Values.postgresqlDatabase }}
           volumeMounts:
             - mountPath: /bitnami/postgresql
               name: postgres-storage

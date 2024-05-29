@@ -1,0 +1,13 @@
+postgresqlPassword: test
+postgresqlDatabase: admin
+primary:
+  persistence:
+    enabled: true
+    existingClaim: postgres-pvc
+  podSecurityContext:
+    fsGroup: 1001
+  containerSecurityContext:
+    runAsUser: 1001
+service:
+  type: NodePort
+  nodePort: 32000
